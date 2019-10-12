@@ -9,16 +9,17 @@ double avg(int *arr, int size) {
 
 void copy_array(int *arr1, int *arr2, int size) {
     int i = 0;
-    for (; i < size; i++) {
+    for (i; i < size; i++) {
         *(arr2 + i) = *(arr1 + i);
     }
 }
 
 int strlen(char *string) {
-    int sum = 0;
+    int length = 0;
     int i = 0;
-    for (; string[i] != '\0'; i++) {
-        sum++;
+    while (string[i]){
+        length++;
+        i++;
     }
-    return sum;
+    return length;
 }

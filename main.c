@@ -4,19 +4,24 @@
 
 int main(){
 	int array[4] = {1,3,5,7};
-	int len = sizeof(alpha)/sizeof(array[0]);
-	int array_last[5];
-	printf("Array: ");
-	int count = 0;
-	for(count;count<len;count++){
+	int len = sizeof(array)/sizeof(array[0]);
+	int arraytwo[5];
+
+	printf("Original Array: ");
+	int i = 0;
+	for(i;i<len;i++){
 		printf("%d, ", array[i]);
 	}
-	printf("\nAvg of the Values: %lf\n", arrmn(alpha, len));
-	arrcp(alpha, omega, len);
-	printf("Copied array: ");
+
+  copy_array(array, arraytwo, len);
+	printf("\nCopied array: ");
 	for(i=0;i<len;i++){
-		printf("%d, ", omega[i]);
+		printf("%d, ", arraytwo[i]);
 	}
-	char str[15] = "hello, world";
-	printf("\nLength of String \"hello, world\": %d\n", lenstr(str));
+printf("\n\nExpected Average of the Values: 4.0");
+	printf("\nOutputted Average of the Values: %lf\n", avg(array, len));
+
+	char str[7] = "yelloo";
+  printf("\nExpected Length of String \"yello\": 6");
+	printf("\nLength of String: %d\n", strlen(str));
 }
